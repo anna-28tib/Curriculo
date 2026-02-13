@@ -1,0 +1,157 @@
+/* VARIÁVEIS DE CORES */
+:root {
+    --primary-color: #2563eb; /* Azul */
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --bg-color: #f3f4f6;
+    --container-bg: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--container-bg);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* CABEÇALHO */
+header {
+    text-align: center;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-top: 5px;
+}
+
+.contact-info {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.contact-info a {
+    color: var(--text-dark);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    color: var(--primary-color);
+}
+
+/* SEÇÕES */
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: var(--text-dark);
+    border-left: 5px solid var(--primary-color);
+    padding-left: 10px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+/* EXPERIÊNCIA E EDUCAÇÃO */
+.job-item, .edu-item {
+    margin-bottom: 20px;
+}
+
+.job-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.company, .school {
+    color: var(--text-light);
+    font-style: italic;
+}
+
+.date {
+    float: right;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+ul {
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+/* HABILIDADES (TAGS) */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background-color: #e5e7eb;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* RESPONSIVIDADE (MOBILE) */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    .date {
+        float: none;
+        display: block;
+        margin-top: 5px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .contact-info a {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+/* BOTÃO DE IMPRIMIR */
+.print-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+@media print {
+    .print-btn { display: none; }
+    body { background-color: white; }
+    .container { box-shadow: none; border: none; }
+}
